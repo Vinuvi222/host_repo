@@ -1,5 +1,5 @@
 // locationsModel.js
-import { supabase } from '../supabaseClient.js';
+import { supabase } from '../config/supabaseClient.js';
 
 const Locations = {
   tableName: 'locations',

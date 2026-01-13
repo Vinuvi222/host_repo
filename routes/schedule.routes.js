@@ -1,7 +1,7 @@
 import express from "express";
-import Schedule from "../models/schedule.model.js";
-import JourneyStatus from "../models/journeyStatus.model.js";
-import Bus from "../models/bus.model.js";
+import Schedule from "../../models/schedule.model.js";
+import JourneyStatus from "../../models/journeyStatus.model.js";
+import Bus from "../../models/bus.model.js";
 
 const router = express.Router();
 

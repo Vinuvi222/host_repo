@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 // Change this
- import bcrypt from "bcryptjs";
+ //import bcrypt from "bcryptjs";
 
 // To this
 import bcrypt from "bcrypt";

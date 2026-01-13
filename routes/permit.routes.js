@@ -1,6 +1,6 @@
 import express from 'express';
-import Permit from '../../models/permit.model.js';
-import Route from '../../models/routemodel.js';
+import Permit from '../bus.model.js';
+import Route from '../models/routemodel.js';
 
 const router = express.Router();
 

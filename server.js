@@ -8,7 +8,7 @@ import cors from 'cors';
 import driverRoutes from './routes/driver.routes.js';
 import loginRoutes from './routes/auth.route.js';
 import addingRoutes from './routes/adding.routes.js';
-import locationRoutes from './routes/location.routes.js';
+//import locationRoutes from './routes/location.routes.js';
 import scheduleRoutes from './routes/schedule.routes.js';
 import permitRoutes from './routes/permit.routes.js';
 import busRoutes from './routes/bus.routes.js';

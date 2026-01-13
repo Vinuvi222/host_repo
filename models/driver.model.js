@@ -1,5 +1,10 @@
 import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
+// Change this
+ import bcrypt from "bcryptjs";
+
+// To this
+import bcrypt from "bcrypt";
+
 
 const driverSchema = mongoose.Schema(
   {

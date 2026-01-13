@@ -1,13 +1,44 @@
 import mongoose from "mongoose";
 
-const busShcema = new mongoose.Schema({
+const busSchema = new mongoose.Schema({
+    busNumber: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true
+    },
+    busName: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    model: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    numberPlate: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true
+    },
+    seats: {
+        type: Number,
+        required: true,
+        min: 10,
+        max: 100
+    },
+    permitId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Permit',
+        required: true
+    },
+    routeId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Route',
+        required: true
+    }
+}, { timestamps: true });
 
-    busNumber : {type : String, required : true, unique : true},
-    model : {type : String, required : true},
-    permitId : {type : mongoose.Schema.Types.ObjectId, ref : 'Permit', required : true},
-    seats : {type : Number, required : true},
-    status : {type : String, enum : ['active', 'inactive'], default : 'inactive' }
-
-}, {timestamps : true});
-
-export default mongoose.model('Bus', busShcema);
+export default mongoose.model("Bus", busSchema);

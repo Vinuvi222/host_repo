@@ -22,15 +22,19 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
-const URL = process.env.MONGODB;
+//const URL = process.env.MONGODB;
 
-mongoose.connect(URL);
+//mongoose.connect(URL);
 
 const connection = mongoose.connection;
 
 connection.once('open', () => {
   console.log("Mongo db connection is successfull.");
 })
+
+mongoose.connect(process.env.MONGODB_URL)
+  .then(() => console.log('✅ MongoDB Connected'))
+  .catch(err => console.error('❌ MongoDB Error:', err));
 
  
 
